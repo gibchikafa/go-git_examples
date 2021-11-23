@@ -27,8 +27,15 @@ func main() {
 	Info("git status --porcelain")
 	status, err := w.Status()
 	CheckIfError(err)
-
 	fmt.Println(status)
+
+	err = w.AddWithOptions(&git.AddOptions{All: true})
+	CheckIfError(err)
+
+	Info("git status --porcelain. After add")
+	s, err := w.Status()
+	CheckIfError(err)
+	fmt.Println(s)
 
 	// Commits the current staging area to the repository, with the new file
 	// just created. We should provide the object.Signature of Author of the
