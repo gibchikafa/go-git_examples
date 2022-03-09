@@ -1,0 +1,65 @@
+cannot provide --device driver to
+
+The purpose of this thesis is to develop an open source multi-user distributed system on Hopsworks (a data-intensive AI platform) that provides RStudio as Software as a Service(SaaS) in a multi-tenant environment with a goal of improving collarobaration among data scientists, and promoting learning and of teaching of R.
+
+Interactive command line systems in which code can be run immediately have become very handy in data science and machine learning spaces. RStudio is a popular IDE for R programming language which is one of the most popular interactive programming language used in data science and machine learning. In order to fully benefit from cloud computing, services are designed following the ``multi-tenant'' architectural model which is aimed at maximizing resource sharing among users.
+
+
+However, multi-tenancy introduces challenges of resource sharing, security, performance isolation, customization and scaling. The purpose of this thesis is to develop an open source multi-user distributed system on Hopsworks (a data-intensive AI platform) following the multi-tenant model, that provides RStudio as Software as a Service (SaaS) with the goal of promoting collaboration among data scientist and the learning and teaching of R by enabling users (e.g., students, researchers, and data scientists) easily have access to same computational environments and resources (e.g, datasets and programs) while eliminating installation and maintanance tasks. In doing so we solved the mentioned challenges that are introduced in a multi-tenant environment. Hopsworks platform is built around project-based multi-tenancy where users within a project share datasets (e.g., data and programs) and other services. Our model is to provide \textit{single user RStudio server instances per project} on demand. Our system is built around Docker and Kubernetes for isolation, security and scaling. We introduce HopsFS-mount, that allows securely mounting HopsFS via FUSE to solve the data sharing problem. We integrate our system with Apache Spark which can scale and handle Big Data processing workloads. Also we provide a UI where users can provide custom configuration and have full control of their own RStudio server instances.
+
+
+The results of tests on the system indicated users can launch individual RStudio servers per project while securely accessing and sharing project resources such as datasets in the RStudio server instances. The system was tested on on-premise installation, Azure and Google Cloud managed cloud platforms.
+
+With our contribution on providing multi-user environment for RStudio on open source Hopsworks while eliminating installation and maintanance tasks, we are promoting collaboration among data scientist and the learning and teaching of R.
+
+Our goal is to enable users easily have access to same computational environments and resources (e.g, datasets and programs) while eliminating installation and maintanance tasks.
+
+
+In order to fully benefit from cloud computing, services are designed following the “multi-tenant” architectural model which is aimed at maximizing resource sharing among users. However, multi-tenancy introduces challenges of resource sharing, security, performance isolation, customization and scaling. RStudio is an open source Integrated Development Environment (IDE) for R programming launguage and provides an interactive command line environment in which ode can be run immediately a feature which has become very handy in data science and machine learning spaces. The purpose of this thesis is to develop an open source multi-user distributed system on Hopsworks (a data-intensive AI platform) following the multi-tenant model, that provides RStudio as Software as a Service (SaaS) with the goal of promoting collaboration among users and the learning and teaching of R by enabling users (e.g., students, researchers, and data scientists) easily have access to same computational environments and resources (e.g, datasets and programs) while eliminating installation and maintanance tasks. To achieve our purpose and goal we need to solve the mentioned challanges that are introduced in a multi-tenant environment. 
+
+
+Hopsworks platform is built around project-based multi-tenancy where users within a project share datasets (e.g., data and programs) and other services. Our model is to provide \textit{single user RStudio server instances per project} on demand. Our system is built around Docker and Kubernetes to solve the problems of performance isolation, security and scaling. We introduce HopsFS-mount, that allows securely mounting HopsFS via FUSE to solve the data sharing problem. We integrate our system with Apache Spark which can scale and handle Big Data processing workloads. Also we provide a UI where users can provide custom configuration and have full control of their own RStudio server instances.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=============OLD ABSTRACT=================================
+In order to fully benefit from cloud computing, services are designed following
+the “multi-tenant” architectural model which is aimed at maximizing resource
+sharing among users. However, multi-tenancy introduces challenges of
+resource sharing, security, performance isolation, customization and scaling.
+The purpose of this thesis is to develop an open source multi-user distributed
+system on Hopsworks (a data-intensive AI platform) following the multi-
+tenant model, that provides RStudio as Software as a Service(SaaS). In doing
+so we solved the mentioned challenges that are introduced in a multi-tenant
+environment. Hopsworks platform is built around project-based multi-tenancy
+where users within a project share datasets (e.g., data and programs) and
+other services. Our model is to provide single user RStudio server instances
+per project on demand. Our system is built around Docker and Kubernetes
+for isolation, security and scaling. We introduce HopsFS-mount, that allows
+securely mounting HopsFS via FUSE to solve the data sharing problem. We
+integrate our system with Apache Spark which can scale and handle Big Data
+processing workloads. Also we provide a UI where users can provide custom
+configuration and have full control of their own RStudio server instances.
+The results of tests on the system indicated users can launch individual
+RStudio servers per project while securely accessing and sharing project
+resources such as datasets in the RStudio server instances. The system was
+tested on on-premise installation, Azure and Google Cloud managed cloud
+platforms.
+With our contribution on providing multi-user environment for RStudio
+on open source Hopsworks while eliminating installation and maintanance
+tasks, we are promoting collaboration among data scientist and the learning
+and teaching of R.
